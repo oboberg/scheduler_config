@@ -6,13 +6,13 @@ try:
 except ImportError:
     from distutils.core import setup
 
-PACKAGE = 'opsim4_config'
+PACKAGE = 'scheduler_config'
 MAJOR = 0
 MINOR = 0
 PATCH = 0
 VERSION = "{0}.{1}.{2}".format(MAJOR, MINOR, PATCH)
 
-MODULE = "opsim4_config"
+MODULE = "scheduler_config"
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -48,14 +48,14 @@ if __name__ == "__main__":
         long_description=readme + os.linesep * 2 + history,
         author="Tiago Ribeiro",
         author_email='tribeiro@lsst.org',
-        url='https://github.com/lsst-ts/opsim4_config',
+        url='https://github.com/lsst-ts/scheduler_config',
         cmdclass={
         },
         scripts=[''],
         packages=[
             '',
         ],
-        package_dir={'opsim4_config':
+        package_dir={'scheduler_config':
                      'lsst'},
         include_package_data=True,
         install_requires=requirements,

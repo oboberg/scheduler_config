@@ -1,5 +1,12 @@
-import lsst.sims.ocs.configuration.instrument.camera
-assert type(config)==lsst.sims.ocs.configuration.instrument.camera.Camera, 'config is of type %s.%s instead of lsst.sims.ocs.configuration.instrument.camera.Camera' % (type(config).__module__, type(config).__name__)
+"""
+This is an example configuration for all the camera and filter change parameters. These would be used on
+Simulations as well as on Operations as they set the parameters for the camera model. Values here are the default
+as of July 2018.
+
+07/2018 - Version 0
+"""
+import lsst.ts.schedulerConfig.instrument.camera
+assert type(config)==lsst.ts.schedulerConfig.instrument.camera.Camera, 'config is of type %s.%s instead of lsst.ts.schedulerConfig.instrument.camera.Camera' % (type(config).__module__, type(config).__name__)
 # Time (units=seconds) for the camera shutter to open or close
 config.shutter_time=1.0
 
