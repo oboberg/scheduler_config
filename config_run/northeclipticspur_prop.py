@@ -1,5 +1,5 @@
-import lsst.ts.schedulerConfig.configuration.science.north_ecliptic_spur
-assert type(config)==lsst.ts.schedulerConfig.configuration.science.north_ecliptic_spur.NorthEclipticSpur, 'config is of type %s.%s instead of lsst.ts.schedulerConfig.configuration.science.north_ecliptic_spur.NorthEclipticSpur' % (type(config).__module__, type(config).__name__)
+import lsst.ts.schedulerConfig.science.north_ecliptic_spur
+assert type(config)==lsst.ts.schedulerConfig.science.north_ecliptic_spur.NorthEclipticSpur, 'config is of type %s.%s instead of lsst.ts.schedulerConfig.configuration.science.north_ecliptic_spur.NorthEclipticSpur' % (type(config).__module__, type(config).__name__)
 # The maximum airmass allowed for any field.
 config.sky_constraints.max_airmass=2.5
 
@@ -20,7 +20,7 @@ config.sky_region.combiners=['and']
 
 config.sky_region.selection_mapping=None
 config.sky_region.selections={}
-config.sky_region.selections[0]=lsst.ts.schedulerConfig.configuration.proposal.selection.Selection()
+config.sky_region.selections[0]=lsst.ts.schedulerConfig.proposal.selection.Selection()
 # Maximum limit (units=degrees) for field selection.
 config.sky_region.selections[0].maximum_limit=10.0
 
@@ -33,7 +33,7 @@ config.sky_region.selections[0].limit_type='EB'
 # Boundary limit (units=degrees) for a sloping envelope selection.
 config.sky_region.selections[0].bounds_limit=float('nan')
 
-config.sky_region.selections[1]=lsst.ts.schedulerConfig.configuration.proposal.selection.Selection()
+config.sky_region.selections[1]=lsst.ts.schedulerConfig.proposal.selection.Selection()
 # Maximum limit (units=degrees) for field selection.
 config.sky_region.selections[1].maximum_limit=90.0
 
@@ -48,13 +48,13 @@ config.sky_region.selections[1].bounds_limit=float('nan')
 
 # Only run NES for first 4 years
 config.sky_region.time_ranges={}
-config.sky_region.time_ranges[0]=lsst.ts.schedulerConfig.configuration.proposal.time_range.TimeRange()
+config.sky_region.time_ranges[0]=lsst.ts.schedulerConfig.proposal.time_range.TimeRange()
 config.sky_region.time_ranges[0].start = 1
 config.sky_region.time_ranges[0].end = 1460
 
 
 config.filters={}
-config.filters['i']=lsst.ts.schedulerConfig.configuration.proposal.general_band_filter.GeneralBandFilter()
+config.filters['i']=lsst.ts.schedulerConfig.proposal.general_band_filter.GeneralBandFilter()
 # Darkest magnitude limit for filter.
 config.filters['i'].dark_limit=30.0
 
@@ -76,7 +76,7 @@ config.filters['i'].max_seeing=2.0
 # The list of exposure times (units=seconds) for the filter
 config.filters['i'].exposures=[15.0, 15.0]
 
-config.filters['r']=lsst.ts.schedulerConfig.configuration.proposal.general_band_filter.GeneralBandFilter()
+config.filters['r']=lsst.ts.schedulerConfig.proposal.general_band_filter.GeneralBandFilter()
 # Darkest magnitude limit for filter.
 config.filters['r'].dark_limit=30.0
 
@@ -98,7 +98,7 @@ config.filters['r'].max_seeing=2.0
 # The list of exposure times (units=seconds) for the filter
 config.filters['r'].exposures=[15.0, 15.0]
 
-config.filters['z']=lsst.ts.schedulerConfig.configuration.proposal.general_band_filter.GeneralBandFilter()
+config.filters['z']=lsst.ts.schedulerConfig.proposal.general_band_filter.GeneralBandFilter()
 # Darkest magnitude limit for filter.
 config.filters['z'].dark_limit=21.0
 
@@ -120,7 +120,7 @@ config.filters['z'].max_seeing=2.0
 # The list of exposure times (units=seconds) for the filter
 config.filters['z'].exposures=[15.0, 15.0]
 
-config.filters['g']=lsst.ts.schedulerConfig.configuration.proposal.general_band_filter.GeneralBandFilter()
+config.filters['g']=lsst.ts.schedulerConfig.proposal.general_band_filter.GeneralBandFilter()
 # Darkest magnitude limit for filter.
 config.filters['g'].dark_limit=30.0
 
