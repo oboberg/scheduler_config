@@ -2,12 +2,12 @@ import lsst.pex.config as pexConfig
 from lsst.ts.schedulerConfig.proposal import General, SelectionList, TimeRange
 from lsst.ts.schedulerConfig.proposal import GeneralBandFilter, Selection
 from lsst.ts.schedulerConfig.proposal import general_prop_reg
-__all__ = ["NorthEclipticSpur"]
-@pexConfig.registerConfig("NorthEclipticSpur", general_prop_reg, General)
+__all__ = ["ModNorthEclipticSpur"]
+@pexConfig.registerConfig("ModNorthEclipticSpur", general_prop_reg, General)
 class NorthEclipticSpur(General):
     def setDefaults(self):
         General.setDefaults(self)
-        self.name = "NorthEclipticSpur"
+        self.name = "ModNorthEclipticSpur"
         # -------------------------
         # Sky Region specifications
         # -------------------------
