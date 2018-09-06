@@ -30,8 +30,11 @@ class ModNorthEclipticSpur(General):
         self.sky_region.time_ranges = {0: time_range0,
                                        1: time_range1}
         sel_map0 = SelectionList()
-        sel_map0.indexes = [0, 1]
-        self.sky_region.selection_mapping = {0: sel_map0}
+        sel_map0.indexes = [0]
+        sel_map1 = SelectionList()
+        sel_map1.indexes = [1]
+        self.sky_region.selection_mapping = {0: sel_map0,
+                                             1: sel_map1}
         # ----------------------------
         # Sky Exclusion specifications
         # ----------------------------
