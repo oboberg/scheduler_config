@@ -21,6 +21,8 @@ class ModNorthEclipticSpur(General):
         sel1.maximum_limit = 90.0
         self.sky_region.selections = {0: sel0,
                                       1: sel1}
+        self.sky_region.combiners = ['and',]
+
         time_range0 = TimeRange()
         time_range0.start = 1
         time_range0.end = 1460
@@ -29,12 +31,10 @@ class ModNorthEclipticSpur(General):
         time_range1.end = 1460
         self.sky_region.time_ranges = {0: time_range0,
                                        1: time_range1}
+
         sel_map0 = SelectionList()
-        sel_map0.indexes = [0]
-        sel_map1 = SelectionList()
-        sel_map1.indexes = [1]
-        self.sky_region.selection_mapping = {0: sel_map0,
-                                             1: sel_map1}
+        sel_map0.indexes = [0, 1]
+        self.sky_region.selection_mapping = {0: sel_map0}
         # ----------------------------
         # Sky Exclusion specifications
         # ----------------------------
