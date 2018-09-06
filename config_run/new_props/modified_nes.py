@@ -4,7 +4,7 @@ from lsst.ts.schedulerConfig.proposal import GeneralBandFilter, Selection
 from lsst.ts.schedulerConfig.proposal import general_prop_reg
 __all__ = ["ModNorthEclipticSpur"]
 @pexConfig.registerConfig("ModNorthEclipticSpur", general_prop_reg, General)
-class NorthEclipticSpur(General):
+class ModNorthEclipticSpur(General):
     def setDefaults(self):
         General.setDefaults(self)
         self.name = "ModNorthEclipticSpur"
